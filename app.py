@@ -20,7 +20,7 @@ def webhook():
             time.sleep(5)
             send_message('Now playing: Despacito')
     else:
-        send_message('no call)
+        send_message('no call')
 
     return "ok", 200
 
@@ -28,7 +28,7 @@ def send_message(msg):
     url = 'https://api.groupme.com/v3/groups/bots/post'
 
     data = {
-        'bot_id' : bot_id
+        'bot_id' : bot_id,
         'text' : msg
     }
 
