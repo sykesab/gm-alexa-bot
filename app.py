@@ -17,8 +17,11 @@ def webhook():
 
     if data['name'] != 'test-alexa':
         if data['text'][:5].lower() == 'alexa':
-            msg = 'Now playing: Despacito'
+            time.sleep(2)
+            msg = 'ɴᴏᴡ ᴘʟᴀʏɪɴɢ: Despacito ───────────────⚪─────────────────── ◄◄⠀▐▐ ⠀►►⠀⠀ ⠀ 1:17 / 3:48 ⠀ ───○ 🔊⠀ ᴴᴰ ⚙ ❐ ⊏⊐'
             send_message(msg)
+            despacito = 'https://youtu.be/kJQP7kiw5Fk?t=21s'
+            send_message(despacito)
 
     return "ok", 200
 
