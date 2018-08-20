@@ -30,9 +30,9 @@ def send_message(msg):
 
     data = {
         'bot_id' : bot_id,
-        'text' : msg
+        'text' : msg,
     }
 
-    request = Request(url, urlencode(data).encode())
-    print(request)
-    #json = urlopen(request).read().decode()
+    rqst = Request(url, urlencode(data).encode())
+    print(rqst)
+    json = urlopen(rqst).read().decode()
