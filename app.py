@@ -9,14 +9,15 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+bot_id = '057d3858182e8a31f234c38eaa'
+group_id = '42721784'
+
 @app.route('/', methods=['POST'])
 def webhook():
     data = request.get_json()
-    bot_id = '057d3858182e8a31f234c38eaa'
-    group_id = '42721784'
 
     if data['text'][:5] == 'Alexa':
-        if data['name'] != 'Alexa':
+        if data['name'] != 'test-alexa':
             time.sleep(5)
             send_message('Now playing: Despacito')
     else:
