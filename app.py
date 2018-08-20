@@ -19,7 +19,7 @@ def webhook():
         if data['name'] != 'Alexa':
             time.sleep(5)
             send_message('Now playing: Despacito')
-    else
+    else:
         send_message('no call)
 
     return "ok", 200
